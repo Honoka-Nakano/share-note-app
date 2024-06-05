@@ -74,13 +74,13 @@ const SignUp = () => {
 
     return (
         <div className="max-w-[400px] mx-auto pt-[100px]">
-            <div className="text-center font-bold text-xl mb-10">Sign Up</div>
+            <div className="text-center font-bold text-xl mb-10">新規登録</div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-3">
                     <input
                         type="text"
                         className="border rounded-md w-full py-2 px-3 focus:outline-none focus:border-sky-500"
-                        placeholder="Name"
+                        placeholder="名前"
                         id="name"
                         {...register('name', { required: true })}
                     />
@@ -91,7 +91,7 @@ const SignUp = () => {
                     <input
                         type="email"
                         className="border rounded-md w-full py-2 px-3 focus:outline-none focus:border-sky-500"
-                        placeholder="Email"
+                        placeholder="メールアドレス"
                         id="email"
                         {...register('email', { required: true })}
                     />
@@ -102,7 +102,7 @@ const SignUp = () => {
                     <input
                         type="password"
                         className="border rounded-md w-full py-2 px-3 focus:outline-none focus:border-sky-500"
-                        placeholder="Password"
+                        placeholder="パスワード"
                         id="password"
                         {...register('password', { required: true })}
                     />
@@ -116,7 +116,7 @@ const SignUp = () => {
                         <button
                             type="submit"
                             className="font-bold bg-sky-500 hover:brightness-95 w-full rounded-full p-2 text-white text-sm">
-                                Sign Up
+                                登録する
                         </button>
                     )}
                 </div>
@@ -126,7 +126,7 @@ const SignUp = () => {
 
             <div className="text-center text-sm">
                 <Link href="/Auth/Login" className="text-gray-500 font-bold">
-                    Login
+                    ログインはこちら
                 </Link>
             </div>
         </div>

@@ -56,13 +56,13 @@ const Login = () => {
 
     return (
         <div className="max-w-[400px] mx-auto pt-[100px]">
-            <div className="text-center font-bold text-xl mb-10">Login</div>
+            <div className="text-center font-bold text-xl mb-10">ログイン</div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-3">
                     <input
                         type="email"
                         className="border rounded-md w-full py-2 px-3 focus:outline-none focus:border-sky-500"
-                        placeholder="Email"
+                        placeholder="メールアドレス"
                         id="email"
                         {...register('email', { required: true})}
                     />
@@ -73,7 +73,7 @@ const Login = () => {
                     <input
                         type="password"
                         className="border rounded-md w-full py-2 px-3 focus:outline-none focus:border-sky-500"
-                        placeholder="Password"
+                        placeholder="パスワード"
                         id="password"
                         {...register('password', { required: true })}
                     />
@@ -87,7 +87,7 @@ const Login = () => {
                         <button
                             type="submit"
                             className="font-bold bg-sky-500 hover:brightness-95 w-full rounded-full p-2 text-white text-sm">
-                                Login
+                                ログイン
                         </button>
                     )}
                 </div>
@@ -97,13 +97,13 @@ const Login = () => {
 
             <div className="text-center text-sm mb-5">
                 <Link href="/Auth/ResetPassword" className="text-gray-500 font-bold">
-                    Forgot password?
+                    パスワードを忘れた場合はこちら
                 </Link>
             </div>
 
             <div className="text-center text-sm">
                 <Link href="/Auth/SignUp" className="text-gray-500 font-bold">
-                    Sign Up
+                    新規登録はこちら
                 </Link>
             </div>
         </div>
