@@ -1,9 +1,32 @@
 'use client'
 
 import Link from "next/link"
+import useStore from "@/store"
+import Image from 'next/image'
+import { useEffect } from "react"
 import type { Session } from "@supabase/auth-helpers-nextjs"
+import type { Database } from '@/lib/database.types'
+type ProfileType = Database['public']['Tables']['profiles']['Row']
 
-const Navigation = ({ session }: { session: Session | null }) => {
+const Navigation = ({
+    session,
+    profile
+}: {
+    session: Session | null,
+    profile: ProfileType | null
+}) => {
+    const { setUser } = useStore()
+
+    useEffect(() => {
+        setUser({
+            id: session ? session.user.id : '',
+            email: session ? session.user.email! : '',
+            name: session && profile ? profile.name : '',
+            introduce: session && profile ? profile.introduce : '',
+            avatar_url: session && profile ? profile.avatar_url : '',
+        })
+    }, [session, setUser, profile])
+
     return (
         <header className='divide-y border-gray-200 dark:border-gray-800 border-b'>
         <div className='px-4 py-4 md:py-6 lg:-x-6'>
@@ -20,7 +43,7 @@ const Navigation = ({ session }: { session: Session | null }) => {
                         Home
                     </Link>
                     <Link
-                        href={"/Auth/Profile"}
+                        href={"/Settings/Profile"}
                         className='font-medium text-gray-500 transitioin-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50'
                     >
                         Profile
