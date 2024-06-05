@@ -76,7 +76,7 @@ const Email = ({ email }: { email: string }) => {
                     <input
                         type="email"
                         className="border rounded-md w-full py-2 px-3 focus:outline-none focus:border-sky-500"
-                        placeholder="New Email Addres"
+                        placeholder="新しいメールアドレス"
                         id="email"
                         {...register('email', { required: true })}
                     />

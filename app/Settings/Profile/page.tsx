@@ -1,7 +1,7 @@
 import { cookies } from 'next/headers'
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { redirect } from 'next/navigation'
-import Profile from '@/components/layouts/Profile'
+import Profile from '@/components/layouts/Settings/Profile'
 
 import type { Database } from '@/lib/database.types'
 
