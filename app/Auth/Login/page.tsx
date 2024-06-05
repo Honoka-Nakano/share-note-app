@@ -1,7 +1,7 @@
 import { cookies } from 'next/headers'
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { redirect } from 'next/navigation'
-import Login from '@/components/layouts/Login'
+import Login from '@/components/layouts/Auth/Login'
 import type { Database } from '@/lib/database.types'
 
 const LoginPage = async () => {

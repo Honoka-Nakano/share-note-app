@@ -30,11 +30,11 @@ const Navigation = ({
     return (
         <header className='divide-y border-gray-200 dark:border-gray-800 border-b'>
         <div className='px-4 py-4 md:py-6 lg:-x-6'>
+            {session ? (
             <div className='flex items-center justify-between'>
-                <Link href="/" className='text-2xl font-bold tracnking-tighte'>
+                <Link href="/Home" className='text-2xl font-bold tracnking-tighte'>
                     Note - hn
                 </Link>
-                {session ? (
                 <nav className='flex space-x-4 items-center'>
                     <Link
                         href={"/CreatePost"}
@@ -53,14 +53,13 @@ const Navigation = ({
                             />
                         </div>
                     </Link>
-                </nav> ) : (
+                </nav>
+            </div> ) : (
+            <div className='flex items-center justify-between'>
+                <Link href="/" className='text-2xl font-bold tracnking-tighte'>
+                    Note - hn
+                </Link>
                 <nav className='space-x-4'>
-                    <Link
-                        href={"/"}
-                        className='font-medium text-gray-500 transitioin-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50'
-                    >
-                        ホーム
-                    </Link>
                     <Link
                         href={"/Auth/Login"}
                         className='font-medium text-gray-500 transitioin-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50'
@@ -74,8 +73,7 @@ const Navigation = ({
                         登録
                     </Link>
                 </nav>
-                )}
-            </div>
+            </div> )}
         </div>
     </header>
     )
