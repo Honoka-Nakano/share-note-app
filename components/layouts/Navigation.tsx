@@ -35,24 +35,23 @@ const Navigation = ({
                     Note - hn
                 </Link>
                 {session ? (
-                <nav className='space-x-4'>
-                    <Link
-                        href={"/Home"}
-                        className='font-medium text-gray-500 transitioin-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50'
-                    >
-                        Home
-                    </Link>
-                    <Link
-                        href={"/Settings/Profile"}
-                        className='font-medium text-gray-500 transitioin-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50'
-                    >
-                        Profile
-                    </Link>
+                <nav className='flex space-x-4 items-center'>
                     <Link
                         href={"/CreatePost"}
                         className='bg-black py-2 px-3 text-white rounded-md font-medium'
                     >
-                        CreatePost
+                        ノートを追加
+                    </Link>
+                    <Link
+                        href={"/Settings/Profile"}>
+                        <div className="relative w-10 md:w-12 h-10 md:h-12">
+                            <Image
+                                src={profile && profile.avatar_url ? profile.avatar_url : '/default.png'}
+                                className="rounded-full object-cover"
+                                alt="avatar"
+                                fill
+                            />
+                        </div>
                     </Link>
                 </nav> ) : (
                 <nav className='space-x-4'>
@@ -60,19 +59,19 @@ const Navigation = ({
                         href={"/"}
                         className='font-medium text-gray-500 transitioin-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50'
                     >
-                        Home
+                        ホーム
                     </Link>
                     <Link
                         href={"/Auth/Login"}
                         className='font-medium text-gray-500 transitioin-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50'
                     >
-                        Login
+                        ログイン
                     </Link>
                     <Link
                         href={"/Auth/SignUp"}
                         className='bg-black py-2 px-3 text-white rounded-md font-medium'
                     >
-                        SignUp
+                        登録
                     </Link>
                 </nav>
                 )}
