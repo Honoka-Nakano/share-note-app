@@ -31,7 +31,7 @@ const Home = async () => {
         <div className='w-10/12 mx-auto h-[200px] relative'>
           <h1 className='absolute bottom-0 text-center w-full text-[40px] md:text-[50px]'>
             Let&apos;s Share <br />
-            Every Note easily.
+            All Notes easily.
           </h1>
         </div>
         <div className='w-fit mx-auto'>
