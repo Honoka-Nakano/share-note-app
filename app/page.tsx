@@ -43,6 +43,7 @@ const Home = async () => {
             className='w-[350px] md:w-[400px] lg:w-[500px] h-[350px] md:h-[400px] lg:h-[500px]'
           />
         </div>
+        <div className='text-red-500 w-fit mx-auto my-2'>Under Development.</div>
       </div>
     </main>
   );
