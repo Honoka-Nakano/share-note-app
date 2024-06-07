@@ -6,7 +6,7 @@ import SupabaseListener from '@/components/SupabaseListener'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Share Note - hn",
+  title: "ShaNo - hn",
   description: "App of Sharing Note",
 };
 

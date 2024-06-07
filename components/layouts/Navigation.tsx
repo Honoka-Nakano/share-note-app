@@ -33,7 +33,7 @@ const Navigation = ({
             {session ? (
             <div className='flex items-center justify-between'>
                 <Link href="/Home" className='text-2xl font-bold tracnking-tighte'>
-                    Note - hn
+                    ShaNo - hn
                 </Link>
                 <nav className='flex space-x-4 items-center'>
                     <Link
@@ -57,9 +57,12 @@ const Navigation = ({
             </div> ) : (
             <div className='flex items-center justify-between'>
                 <Link href="/" className='text-2xl font-bold tracnking-tighte'>
-                    Note - hn
+                    ShaNo - hn
                 </Link>
                 <nav className='space-x-4'>
+
+                    {/*
+
                     <Link
                         href={"/Auth/Login"}
                         className='font-medium text-gray-500 transitioin-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50'
@@ -72,6 +75,9 @@ const Navigation = ({
                     >
                         登録
                     </Link>
+
+                    */}
+
                 </nav>
             </div> )}
         </div>
