@@ -8,6 +8,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Button } from '@/components/ui/button'
 
 const Note = () => {
   return (
@@ -19,9 +29,23 @@ const Note = () => {
       <CardContent>
         Text text text text text text text text text text text text text text text text.
       </CardContent>
-      <CardFooter className="flex justify-between">
-        <p className="font-bold text-sky-500">Read More &rarr;</p>
-      </CardFooter>
+      <Dialog>
+        <DialogTrigger>
+          <CardFooter className="flex justify-between">
+            <p className="font-bold text-sky-500">Read More &rarr;</p>
+          </CardFooter>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogHeader>
+            <DialogHeader>Create project</DialogHeader>
+            <DialogDescription>Deploy your new project in one-click.</DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4">
+            <p>Text text text text text text text text text text text text text text text text.</p>
+            <p>Name</p>
+          </div>
+        </DialogContent>
+      </Dialog>
     </Card>
   )
 }
