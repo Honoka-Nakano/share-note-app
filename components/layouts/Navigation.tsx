@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { useEffect } from "react"
 import type { Session } from "@supabase/auth-helpers-nextjs"
 import type { Database } from '@/lib/database.types'
+import CreateNote from "./CreateNote/CreateNote"
 type ProfileType = Database['public']['Tables']['profiles']['Row']
 
 const Navigation = ({
@@ -36,12 +37,16 @@ const Navigation = ({
                     ShaNo - hn
                 </Link>
                 <nav className='flex space-x-4 items-center'>
+
+                    {/*
                     <Link
                         href={"/CreatePost"}
                         className='bg-black py-2 px-3 text-white rounded-md font-medium'
                     >
                         ノートを追加
                     </Link>
+                    */}
+                    <CreateNote />
                     <Link
                         href={"/Settings/Profile"}>
                         <div className="relative w-10 md:w-12 h-10 md:h-12">
